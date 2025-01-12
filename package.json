@@ -1,14 +1,14 @@
 {
-	"name": "smarty-template-support",
-	"displayName": "Smarty Template Support",
+	"name": "smarty-template-support-2",
+	"displayName": "Smarty Template Support 2",
 	"description": "Smarty template support with formatting, folding, snippets, syntax highlighting and more",
 	"author": {
-		"name": "Aswin Kumar",
-		"email": "aswinkumar863@gmail.com"
+		"name": "Rodrigo Torres",
+		"email": "torres.dark@gmail.com"
 	},
 	"license": "MIT",
-	"version": "2.1.1",
-	"publisher": "aswinkumar863",
+	"version": "3.0.0",
+	"publisher": "darktorres",
 	"icon": "images/logo.png",
 	"galleryBanner": {
 		"color": "#BEAE3A",
@@ -16,10 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aswinkumar863/smarty-vscode-support.git"
-	},
-	"sponsor": {
-		"url": "https://ko-fi.com/aswinkumar863"
+		"url": "https://github.com/darktorres/smarty-vscode-support.git"
 	},
 	"categories": [
 		"Programming Languages",
@@ -36,11 +33,8 @@
 		"php"
 	],
 	"engines": {
-		"vscode": "^1.43.0"
+		"vscode": "^1.96.0"
 	},
-	"activationEvents": [
-		"onLanguage:smarty"
-	],
 	"main": "./client/dist/node/nodeClientMain",
 	"browser": "./client/dist/browser/browserClientMain",
 	"contributes": {
@@ -112,29 +106,24 @@
 		}
 	},
 	"scripts": {
-		"test": "sh ./scripts/e2e.sh",
-		"test-compile": "tsc -p ./",
-		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-		"vscode:prepublish": "npm run package && npm run package-web",
+		"test-compile": "tsc",
+		"postinstall": "cd client && npm install && cd ../server && npm install",
+		"vscode:prepublish": "npm run package",
 		"compile": "webpack --config ./extension.webpack.config.js",
 		"watch": "webpack --watch --config ./extension.webpack.config.js",
 		"package": "webpack --mode production --devtool hidden-source-map --config ./extension.webpack.config.js",
-		"package:dev": "webpack --mode none --config ./extension.webpack.config.js",
-		"compile-web": "webpack --config ./extension-browser.webpack.config.js",
-		"watch-web": "webpack --watch --config ./extension-browser.webpack.config.js",
-		"package-web": "webpack --mode production --devtool hidden-source-map --config ./extension-browser.webpack.config.js",
-		"package-web:dev": "webpack --mode none --config ./extension.webpack.config.js"
+		"package:dev": "webpack --mode none --config ./extension.webpack.config.js"
 	},
 	"devDependencies": {
-		"@types/mocha": "^9.1.1",
-		"@types/node": "^18.0.0",
-		"path-browserify": "^1.0.1",
-		"ts-loader": "^9.3.0",
-		"tslint": "^6.1.3",
-		"webpack": "^5.73.0",
-		"webpack-cli": "^4.10.0"
+		"@types/mocha": "10.0.10",
+		"@types/node": "20.x",
+		"path-browserify": "1.0.1",
+		"ts-loader": "9.5.2",
+		"tslint": "6.1.3",
+		"webpack": "5.97.1",
+		"webpack-cli": "6.0.1"
 	},
 	"dependencies": {
-		"typescript": "^4.7.4"
+		"typescript": "5.7.3"
 	}
 }

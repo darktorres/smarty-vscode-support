@@ -5,7 +5,7 @@ import { CONFIG } from "../configuration";
 import * as CONSTANT from "../constants";
 
 export class HighlightDecoration {
-	timeout: NodeJS.Timer | undefined = undefined;
+	timeout: NodeJS.Timeout | undefined = undefined;
 	smartyDecoration: TextEditorDecorationType;
 
 	constructor(activeTextEditor: TextEditor){
