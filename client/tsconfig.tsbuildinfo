@@ -1,0 +1,1 @@
+{"root":["./src/client.ts","./src/configuration.ts","./src/constants.ts","./src/extension.ts","./src/interfaces.ts","./src/utils.ts","./src/language/beautify.ts","./src/language/configuration.ts","./src/language/decoration.ts","./src/language/documentLink.ts","./src/language/formatter.ts","./src/language/hover.ts"],"version":"5.7.3"}
